@@ -1,5 +1,7 @@
 package azienda;
 
-public class Stampabile {
+public interface Stampabile {
+	
+	void stampaDettagli();
 
 }
