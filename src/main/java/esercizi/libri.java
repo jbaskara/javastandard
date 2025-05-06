@@ -12,7 +12,6 @@ public class libri {
 		libri.add("Il Signore degli Anelli");
 		libri.add("1984");
 		libri.add("Il Piccolo Principe");
-		
 		System.out.println("Lista libri: " + libri);
 		System.out.println();
 		
