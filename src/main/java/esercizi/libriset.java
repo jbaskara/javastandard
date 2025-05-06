@@ -3,7 +3,7 @@ package esercizi;
 import java.util.HashSet;
 import java.util.Set;
 
-public class libri2 {
+public class libriset {
 	
 	public static void main(String[] args) {
 		
