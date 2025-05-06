@@ -19,6 +19,7 @@ public class numero {
 		
 		System.out.println("\nRisultato (in String raddoppiato): " + risultato);
 		
+		input.close();		
 	}
 
 }
