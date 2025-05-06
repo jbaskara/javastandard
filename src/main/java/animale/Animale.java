@@ -12,14 +12,26 @@ public class Animale {
 	
 	public String verso() {
 		
-		return "Questo animale fa un verso.";
+		return nome + " fa un verso.";
 		
 	}
 	
 	public String muoviti() {
 		
-		return "Il " + nome + " si muove.";
+		return nome + " si muove.";
 		
 	}
+
+    public String emettiSuono() {
+    	
+    	return nome + " emette suoni.";
+        
+    }
+
+    public String vola() {
+    	
+    	return nome + " si vola.";
+        
+    }
 	
 }
