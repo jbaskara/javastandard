@@ -38,6 +38,8 @@ public class studenti {
 		
 		System.out.println("\nNomi degli studenti: \n" + votiStudenti.keySet());
 		
+		System.out.println("\nVoti degli studenti: \n" + votiStudenti.values());
+		
 		System.out.println("\nCoppie nome-voto: ");
 		
 		for (Map.Entry<String, Integer> entry : votiStudenti.entrySet()) {
