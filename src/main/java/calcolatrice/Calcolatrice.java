@@ -15,36 +15,43 @@ public class Calcolatrice extends JFrame implements ActionListener {
 		
 		setTitle("Mini Calcolatrice");
 		setSize(400, 250);
+		setLocationRelativeTo(null);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLayout(new GridLayout(4, 2, 5, 5));
+		setLayout(new BorderLayout(10, 10));
 		
+		JPanel pannelloInput = new JPanel(new GridLayout(2, 2, 10, 10));
 		campo1 = new JTextField();
+		pannelloInput.add(new JLabel("Numero 1: "));
+		pannelloInput.add(campo1);
 		campo2 = new JTextField();
+		pannelloInput.add(new JLabel("Numero 2: "));
+		pannelloInput.add(campo2);
 		
+		JPanel pannelloBottoni = new JPanel(new GridLayout(2, 2, 10, 10));
 		somma = new JButton("+");
 		sottrai = new JButton("-");
 		moltiplica = new JButton("*");
 		dividi = new JButton("/");
 		
-		risultato = new JLabel(" = ");
-		
-		add(campo1);
-		add(campo2);
-		add(somma);
-		add(sottrai);
-		add(moltiplica);
-		add(dividi);
-		
-		somma.addActionListener(this);
-		sottrai.addActionListener(this);
-		moltiplica.addActionListener(this);
-		dividi.addActionListener(this);
+		JButton[] bottoni = {somma, sottrai, moltiplica, dividi};
+		for (JButton b : bottoni) {
+			
+			b.setFont(new Font("Arial", Font.BOLD, 18));
+			b.addActionListener(this);
+			pannelloBottoni.add(b);
+			
+		}
 		
 		JPanel pannelloRisultato = new JPanel();
+		risultato = new JLabel("Risultato: ");
+		risultato.setFont(new Font("Arial", Font.BOLD, 16));
 		
 		pannelloRisultato.add(risultato);
-		add(pannelloRisultato);
+		
+		add(pannelloInput, BorderLayout.NORTH);
+		add(pannelloBottoni, BorderLayout.CENTER);
+		add(pannelloRisultato, BorderLayout.SOUTH);
 		
 		setVisible(true);
 		
@@ -83,7 +90,7 @@ public class Calcolatrice extends JFrame implements ActionListener {
 				
 			}
 			
-			risultato.setText("=  " + ris);
+			risultato.setText("Risultato: " + ris);
 			
 		} catch (NumberFormatException ex) {
 			
